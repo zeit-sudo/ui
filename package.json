@@ -1,0 +1,9 @@
+{
+  "name": "my-ui-hook",
+  "scripts": {
+    "dev": "now dev -p 1234"
+  },
+  "dependencies": {
+    "@zeit/integration-utils": "latest"
+  }
+}
