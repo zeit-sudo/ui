@@ -41,29 +41,23 @@ async function start({user, payload}) {
           <ProjectSwitcher />
         </FsContent>
       </Fieldset>
-      <Fieldset>
-        <FsContent>
-        <H1>Currently Secrets:</H1>
         ${secrets.data.secrets.map((s, i)=>{
           return htm`
-            <Box display="flex" justifyContent="space-between">
-              <Box width="30%">
-                <B>${s.name}</B>
+          <Fieldset>
+            <FsContent>
+              <Box>
+                ${s.name}
               </Box>
-              <Box width="30%">
+              <Box>
                 <Input name="${s.name}" value="************" />
               </Box>
-              <Box width="20%">
+              <Box>
                 <Button>Delete</Button>
               </Box>
-              <Box width="20%">
-                <Button>Delete</Button>
-              </Box>
-            </Box>
+            </FsContent>
+            </Fieldset>
           `
         })}
-        </FsContent>
-      </Fieldset>
     </Page>
     `
   }
