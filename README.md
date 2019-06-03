@@ -5,7 +5,7 @@
 # ZEIT sudo
 > Secured secret management system (SMS) in a few clicks
 
-![image](https://github.com/zeit-sudo/assets/blob/master/Workflow%201-1.png?raw=true)
+![image](https://raw.githubusercontent.com/zeit-sudo/assets/master/Workflow%201.png)
 
 ### Why
 ZEIT server accelerates business but deserves a full-functioning system to store secret safely and retrieve that securely.
