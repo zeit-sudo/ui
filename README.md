@@ -27,7 +27,7 @@ ZEIT server accelerates business but deserves a full-functioning system to store
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7oggtQbnoOs/0.jpg)](https://www.youtube.com/watch?v=7oggtQbnoOs)
 
 ## Use it on zeit
-visit (zeit.co/integrations/zeit-sudo-test)[https://zeit.co/integrations/zeit-sudo-test]
+visit [zeit.co/integrations/zeit-sudo-test](https://zeit.co/integrations/zeit-sudo-test)
 
 ## License
 MIT
