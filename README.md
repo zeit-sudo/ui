@@ -1,3 +1,7 @@
+<div align="right">
+    <img height='100px' src='https://github.com/zeit-sudo/assets/blob/master/Logo.png?raw=true'/>
+</div>
+
 # ZEIT sudo
 > Secured secret management system (SMS) in a few clicks
 
@@ -16,3 +20,13 @@ ZEIT server accelerates business but deserves a full-functioning system to store
 - render list
 - redeploy last deployment file and deploy with the new secret
 - change alias records
+
+## Use it on zeit
+visit (zeit.co/integrations/zeit-sudo-test)[https://zeit.co/integrations/zeit-sudo-test]
+
+## License
+MIT
+
+<div align="center" styles="marginTop: 30px">
+    <img height='20px' src='https://github.com/zeit-sudo/assets/blob/master/Word%20Logo.png?raw=true'/>
+</div>
