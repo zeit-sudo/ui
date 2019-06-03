@@ -1,5 +1,5 @@
 <div align="right">
-    <img height='20px' src='https://github.com/zeit-sudo/assets/blob/master/Logo.png?raw=true'/>
+    <img height='100px' src='https://github.com/zeit-sudo/assets/blob/master/Logo.png?raw=true'/>
 </div>
 
 # ZEIT sudo
