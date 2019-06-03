@@ -1,5 +1,5 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-long.png'/>
+    <img height='20px' src='https://github.com/zeit-sudo/assets/blob/master/Logo.png?raw=true'/>
 </div>
 
 # ZEIT sudo
