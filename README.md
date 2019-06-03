@@ -28,5 +28,5 @@ visit (zeit.co/integrations/zeit-sudo-test)[https://zeit.co/integrations/zeit-su
 MIT
 
 <div align="center" styles="marginTop: 30px">
-    <img height='100px' src='https://github.com/zeit-sudo/assets/blob/master/Word%20Logo.png?raw=true'/>
+    <img height='40px' src='https://github.com/zeit-sudo/assets/blob/master/Word%20Logo.png?raw=true'/>
 </div>
