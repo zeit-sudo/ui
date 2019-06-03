@@ -24,6 +24,9 @@ ZEIT server accelerates business but deserves a full-functioning system to store
 ## Use it on zeit
 visit (zeit.co/integrations/zeit-sudo-test)[https://zeit.co/integrations/zeit-sudo-test]
 
-<div align="center">
+
+
+
+<div align="center" styles="marginTop: 30px">
     <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-r-144.png'/>
 </div>
