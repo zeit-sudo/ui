@@ -25,20 +25,19 @@ async function renderListPage({user: {team_id}, payload}){
   axios.defaults.headers.common = {'Authorization': `Bearer ${token}`};
 
   if(payload.action.includes('add_secret###new_secret')){
-    const {new_secret_name, new_secret_value} = clientState;
+    let {new_secret_name, new_secret_value} = clientState;
     if(new_secret_name&&new_secret_value){
+      new_secret_name = new_secret_name.replace(/\s/g, '_');
       const url = `v2/now/secrets?teamId=${team_id}`;
       const createSecret = await axios.post(url, 
         {name:new_secret_name, value:new_secret_value}
       );
     }
   }
-
   if(payload.action.includes('delete_secret###')){
     const target = payload.action.split('###')[1];
     const url = `v2/now/secrets/${target}?teamId=${team_id}`;
     const deleteSecret = await axios.delete(url);
-    // console.log(deleteSecret)
   }
   if(payload.action.includes('delete_env###')){
     const target = payload.action.split('###')[1];
@@ -50,9 +49,7 @@ async function renderListPage({user: {team_id}, payload}){
     new_env_key = new_env_key.replace(/\s/g, '');
     if(new_env_key&&new_env_value){
       const url = `v1/projects/${projectId}/env?teamId=${team_id}`;
-      const createEnv = await axios.post(url, 
-        {key:new_env_key, value:`@${new_env_value}`}
-      );
+      const createEnv = await axios.post(url, {key:new_env_key, value:`@${new_env_value}`} );
       // console.log(createEnv);
     }
   }
@@ -62,7 +59,7 @@ async function renderListPage({user: {team_id}, payload}){
     <Box display="flex" flexDirection="row" justifyContent="Space-between" textAlign="left" fontSize="1.2rem" margin="20px">
       <Box width="30%"><H1>Secrets</H1></Box>
     </Box>
-    <Notice type="message">Secrets are bound to account/team.</Notice>
+    <Notice type="message">NOTE: Secrets are bound to account/team.</Notice>
     <Fieldset>
       <Box display="flex" flexDirection="row" justifyContent="Space-between" textAlign="left" fontSize="1.2rem" margin="20px">
         <Box width="33%">
@@ -100,6 +97,10 @@ async function renderListPage({user: {team_id}, payload}){
     </Box>
     ${renderInfoEnv(projectId)}
     ${await renderEnv(projectId, secretsList)}
+    <Box height="40px"></Box>
+    <H1>Deployment</H1>
+    <Notice type="message">NOTE: you have to redeploy last build to reflect your modification of environment variables.</Notice>
+    ${renderDeployment(projectId)}
     <Box height="80px"></Box>
   </Page>
   `
@@ -115,9 +116,14 @@ if(!projectId){
 }
 }
 
+async function renderDeployment(projectId) {
+  console.log('1');
+  const deploymentList = await axios.get(`v4/now/deployments?projectId=${projectId}`);
+  console.log(deploymentList.data);
+}
+
 async function renderEnv(projectId, secretsList) {
   if(!projectId) return htm`<Box></Box>`;
-  console.log(projectId);
   const envsList = await axios.get(`v1/projects/${projectId}/env`);
   return htm`<Notice>NOTE: For security, only secrets can be used for these environment variables.</Notice>
   <Fieldset>
