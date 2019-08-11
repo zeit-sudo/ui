@@ -5,23 +5,23 @@
 # ZEIT sudo
 > Secured secret management system (SMS) in a few clicks
 
-![image](https://github.com/zeit-sudo/assets/blob/master/Workflow%201-1.png?raw=true)
+<img height='200px' src='https://github.com/zeit-sudo/assets/blob/master/Workflow%201-1.png?raw=true'/>
 
 ---
 
-### Why
+# Why
 ZEIT server accelerates business but deserves a full-functioning system to store secret safely and retrieve that securely.
 
 ---
 
-### What
+# What
 "sudo SMS" introduces a secret management GUI and seamless redeployment mechanism.
 
-![designbysunny](https://github.com/zeit-sudo/assets/blob/master/Workflow%202-1.png?raw=true)
+<img height='200px' src='https://github.com/zeit-sudo/assets/blob/master/Workflow%202-1.png?raw=true'/>
 
 ---
 
-## How
+# How
 - Fetch project from ZEIT API
 - render list
 - redeploy last deployment file and deploy with the new secret
@@ -29,12 +29,12 @@ ZEIT server accelerates business but deserves a full-functioning system to store
 
 ---
 
-## Use it on zeit
-visit (zeit.co/integrations/zeit-sudo-test)[https://zeit.co/integrations/zeit-sudo-test]
+# Use it on zeit
+visit [zeit.co/integrations/zeit-sudo-test](https://zeit.co/integrations/zeit-sudo-test)
 
 ---
 
-## License
+# License
 MIT
 
 <div align="center" styles="marginTop: 30px">
