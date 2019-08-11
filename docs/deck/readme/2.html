@@ -1,0 +1,52 @@
+<html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta property="og:type" content="website">
+          <meta property="og:image" content="">
+          <meta property="og:site_name" content="">
+          <title>Presentation | 2</title>
+          <link rel='stylesheet' type='text/css' href='markdeck/basic.css'>
+          <script type="application/javascript">
+            function toggleFullScreen() {
+              if (!document.fullscreenElement) {
+                  document.documentElement.requestFullscreen();
+              } else {
+                if (document.exitFullscreen) {
+                  document.exitFullscreen(); 
+                }
+              }
+            }
+            const getCurrentPath = () => {
+              if(window.location){
+                const currentPath = window.location.href.split('/')
+                currentPath.pop()
+                const currentSrcPath = currentPath.join('/');
+                return currentSrcPath;
+              }
+            }
+            function goBack(loc) {
+              const url = getCurrentPath()+"/"+loc;
+              window.location.href = url;
+            }
+            function goForward(loc) {
+              const url = getCurrentPath()+"/"+loc;
+              window.location.href = url;
+            }
+          </script>        
+        </head>
+        <body>
+          <div id='displayer'>
+            <div>
+<h3 id="what">What</h3>
+<p>"sudo SMS" introduces a secret management GUI and seamless redeployment mechanism.</p>
+<p><img src="https://github.com/zeit-sudo/assets/blob/master/Workflow%202-1.png?raw=true" alt="designbysunny" /></p>
+</div>
+          </div>
+          <div id='btn-container'>
+            <a class='btn' onclick='goBack("1.html")'><<</a>
+            <a class='btn' onclick='goForward("3.html")'>>></a>
+            <a class='btn' onclick='toggleFullScreen()'>full screen</a>
+          </div>
+        </body>
+        </html>
